@@ -822,3 +822,39 @@ main {
     color: var(--color-text-primary);
     margin-bottom: 1rem;
 }
+
+/* ==========================================================================
+   Responsive Page Content
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* --- Services Page Mobile Layout --- */
+    .service-card,
+    .service-card:nth-child(even) {
+        grid-template-columns: 1fr;
+        /* Stack to a single column */
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    /* This ensures the image is always on top on mobile */
+    .service-card:nth-child(even) .service-image {
+        order: 0;
+    }
+
+    .service-image {
+        padding: 2rem;
+    }
+
+    /* --- Contact Page Mobile Layout --- */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        /* Stack to a single column */
+        gap: 3rem;
+    }
+
+    .contact-card {
+        padding: 2rem;
+    }
+}
