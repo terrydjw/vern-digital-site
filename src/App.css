@@ -830,24 +830,24 @@ main {
 @media screen and (max-width: 768px) {
 
     /* --- Services Page Mobile Layout --- */
-    .service-image {
-        padding: 2rem;
-    }
-
     .service-card {
         flex-direction: column;
-        /* Stacks the icon and text vertically */
+        /* Stacks items vertically */
         text-align: center;
-        /* Centers the content for a clean mobile look */
-        gap: 2rem;
+        gap: 1rem;
         padding: 2rem;
     }
 
-    /* This resets the order for the alternating card on mobile */
-    .service-card:nth-child(even) .service-content {
-        order: 0;
+    /* This is the new, crucial part */
+    .service-card .service-image {
+        order: 1;
+        /* Tells the browser to display the icon container first */
     }
 
+    .service-card .service-content {
+        order: 2;
+        /* Tells the browser to display the text container second */
+    }
 
 
     /* --- Contact Page Mobile Layout --- */
