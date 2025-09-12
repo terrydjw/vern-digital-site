@@ -193,31 +193,31 @@ main {
 
 .navbar-brand {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     letter-spacing: 1.5px;
     color: var(--color-text-primary);
     text-decoration: none;
     font-weight: 700;
     display: flex;
     align-items: center;
-    transition: all 0.3s ease;
+    z-index: 11;
+    /* Keep brand on top on mobile */
 }
 
 .logo-v {
     color: var(--color-accent-red);
-    font-size: 2.2rem;
-    /* Make the 'V' slightly larger */
+    font-size: 1.9rem;
     margin-right: 2px;
     transition: all 0.3s ease;
 }
 
-.navbar-brand:hover .logo-v {
-    transform: scale(1.2) rotate(-5deg);
-    text-shadow: 0 0 15px rgba(210, 4, 45, 0.5);
-}
-
 .logo-text {
     transition: color 0.3s ease;
+}
+
+.navbar-brand:hover .logo-v {
+    transform: scale(1.1) rotate(-5deg);
+    text-shadow: 0 0 15px rgba(210, 4, 45, 0.5);
 }
 
 .navbar-brand:hover .logo-text {
@@ -279,6 +279,45 @@ main {
     filter: brightness(1.1);
 }
 
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    z-index: 11;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        transition: left 0.3s ease-in-out;
+    }
+
+    .navbar-links.mobile-open {
+        left: 0;
+    }
+
+    .navbar-link {
+        font-size: 1.5rem;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+
 /* --- Footer --- */
 .footer {
     background-color: #1D1D1F;
@@ -302,12 +341,14 @@ main {
     font-size: 2rem;
     letter-spacing: 1.5px;
     color: var(--color-bg-primary);
-    /* White */
+    /* Sets heading to White */
     margin-bottom: 1rem;
 }
 
 .footer-brand p {
     line-height: 1.7;
+    color: var(--color-text-secondary);
+    /* Sets paragraph to Medium Grey */
 }
 
 .footer-links h4 {
@@ -315,27 +356,30 @@ main {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: var(--color-bg-primary);
-    /* White */
+    /* Sets heading to White */
     text-transform: uppercase;
 }
 
+/* This rule targets all text and links in the columns for readability */
 .footer-links p,
 .footer-links a {
     display: block;
     margin-bottom: 1rem;
     color: var(--color-text-secondary);
-    /* Medium Grey */
+    /* Sets links/text to Medium Grey */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
     color: var(--color-accent-red);
+    /* Links turn Red on hover */
 }
 
 .copyright {
     text-align: center;
     color: var(--color-text-secondary);
+    /* Sets copyright to Medium Grey */
     border-top: 1px solid #444;
     padding-top: 2rem;
     margin-top: 3rem;
@@ -740,4 +784,41 @@ main {
     /* Make it nice and tall */
     border: 0;
     display: block;
+}
+
+/* --- Responsive Page Header --- */
+@media screen and (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+        /* Smaller font size for mobile headers */
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+        /* Smaller font size for mobile subtitles */
+    }
+}
+
+/* --- Desktop-Only Message for Demo Page --- */
+.desktop-only-message {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.desktop-only-message svg {
+    color: var(--color-accent-red);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.desktop-only-message h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
 }
