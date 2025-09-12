@@ -830,16 +830,17 @@ main {
 @media screen and (max-width: 768px) {
 
     /* --- Services Page Mobile Layout --- */
-    .service-card,
-    .service-card:nth-child(even) {
-        grid-template-columns: 1fr;
-        /* Stack to a single column */
+    .service-card {
+        flex-direction: column;
+        /* Stacks the icon and text vertically */
+        text-align: center;
+        /* Centers the content for a clean mobile look */
         gap: 2rem;
         padding: 2rem;
     }
 
-    /* This ensures the image is always on top on mobile */
-    .service-card:nth-child(even) .service-image {
+    /* This resets the order for the alternating card on mobile */
+    .service-card:nth-child(even) .service-content {
         order: 0;
     }
 
