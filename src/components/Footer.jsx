@@ -18,8 +18,8 @@ const Footer = () => {
                 </div>
                 <div className="footer-links">
                     <h4>Contact</h4>
-                    <a href="mailto:contact@verndigital.com">contact@verndigital.com</a>
-                    <p>(Your Phone Number)</p>
+                    <a href="mailto:dylan@verndigital.com">dylan@verndigital.com</a>
+                    <p>07935 712911</p>
                     <p>Coventry, UK</p>
                 </div>
             </div>

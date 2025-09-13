@@ -30,7 +30,7 @@ const Contact = () => {
                             </div>
                             <div className="info-item">
                                 <FaPhone size={20} />
-                                <span>07935 123456</span>
+                                <span>07935 712911</span>
                             </div>
                             <div className="info-item">
                                 <FaMapMarkerAlt size={20} />

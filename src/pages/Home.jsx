@@ -71,10 +71,10 @@ const Home = () => {
                 <div className="social-proof-content">
                     <h2 className="social-proof-title">Trusted by Leading Local Businesses</h2>
                     <div className="logos-grid">
-                        <span className="logo-item">Coventry Motors</span>
-                        <span className="logo-item">Midlands Auto Care</span>
+                        <span className="logo-item">Coventry Back Motors</span>
+                        <span className="logo-item">Turntle Auto Care</span>
                         <span className="logo-item">City Centre Salon</span>
-                        <span className="logo-item">Westside Clinic</span>
+                        <span className="logo-item">Eastside Clinic</span>
                     </div>
                 </div>
             </AnimatedSection>
