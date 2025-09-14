@@ -1,13 +1,33 @@
+import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
     const [ref, isVisible] = useScrollAnimation({ threshold: 0.1, triggerOnce: true });
+    const [result, setResult] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert("Thank you for your message! We'll be in touch soon.");
-        e.target.reset();
+        setResult("Sending....");
+        const formData = new FormData(e.target);
+
+        // --- IMPORTANT: Replace with your actual access key from Web3Forms ---
+        formData.append("access_key", "2148dbf8-54b7-4484-8bbf-49e96265dabb");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Message sent successfully!");
+            e.target.reset(); // Reset the form after successful submission
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
     };
 
     return (
@@ -55,6 +75,8 @@ const Contact = () => {
                                 </div>
                                 <button type="submit" className="cta-button">Send Message</button>
                             </form>
+                            {/* This will display the success or error message to the user */}
+                            {result && <p className="form-result-message">{result}</p>}
                         </div>
                     </div>
                 </div>

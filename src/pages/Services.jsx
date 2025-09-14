@@ -62,7 +62,7 @@ const Services = () => {
                 <ServiceCard
                     icon={<FaDesktop size={100} color="var(--color-accent-red)" />}
                     title="Modern Website Remastering"
-                    description="An outdated website can turn away potential customers. We remaster existing websites, giving them a clean, modern, and professional design that works perfectly on all devices. We focus on fast loading times and a clear user experience to help you convert more visitors into paying customers."
+                    description="An outdated website can turn away potential customers. We create or remaster existing websites, giving them a clean, modern, and professional design that works perfectly on all devices. We focus on fast loading times and a clear user experience to help you convert more visitors into paying customers."
                     features={webFeatures}
                     imageFirst={true}
                 />
