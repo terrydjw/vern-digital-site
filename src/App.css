@@ -88,39 +88,69 @@ main {
     box-shadow: 0 10px 30px rgba(210, 4, 45, 0.2);
 }
 
-/* --- Social Proof Section --- */
-.social-proof-section {
-    padding: 3rem 5%;
-    border-bottom: 1px solid var(--color-border);
+/* --- Commitment Section --- */
+.commitment-section {
+    /* This rule now only controls the vertical spacing */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
-.social-proof-content {
-    max-width: 1200px;
+.commitment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
+    /* row-gap column-gap */
+
+    /* This creates the centered container */
+    max-width: 1024px;
     margin: 0 auto;
-    text-align: center;
+
+    /* These styles create the grey box */
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 4rem;
 }
 
-.social-proof-title {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-}
-
-.logos-grid {
+.commitment-item {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
 }
 
-.logo-item {
-    font-family: var(--font-heading);
+.commitment-icon {
     font-size: 1.5rem;
+    color: var(--color-accent-red);
+    margin-top: 5px;
+}
+
+.commitment-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.commitment-item p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--color-text-secondary);
-    opacity: 0.7;
+}
+
+/* This makes the grid mobile-friendly */
+@media screen and (max-width: 768px) {
+    .commitment-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .commitment-grid {
+        grid-template-columns: 1fr;
+        /* Stacks to a single column on mobile */
+        padding: 2.5rem;
+    }
 }
 
 /* --- Features Section --- */
@@ -398,7 +428,7 @@ main {
     justify-content: center;
     /* This distributes the items evenly */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10rem;
     text-align: center;
     width: 101%;
@@ -534,6 +564,7 @@ main {
 
 .how-it-works-section {
     margin-top: 6rem;
+    padding-top: 5rem;
 }
 
 /* --- Detailed Features Section --- */

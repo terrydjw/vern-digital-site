@@ -7,7 +7,10 @@ import {
     FaLightbulb,
     FaBook,
     FaChartPie,
-    FaGlobe
+    FaGlobe,
+    FaUserCog,
+    FaHandshake,
+    FaDollarSign
 } from 'react-icons/fa';
 
 // --- Reusable Sub-components ---
@@ -66,18 +69,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* --- Social Proof Section --- */}
-            <AnimatedSection className="social-proof-section">
-                <div className="social-proof-content">
-                    <h2 className="social-proof-title">Trusted by Leading Local Businesses</h2>
-                    <div className="logos-grid">
-                        <span className="logo-item">Coventry Back Motors</span>
-                        <span className="logo-item">Turntle Auto Care</span>
-                        <span className="logo-item">City Centre Salon</span>
-                        <span className="logo-item">Eastside Clinic</span>
-                    </div>
-                </div>
-            </AnimatedSection>
+
 
             {/* --- High-Level Features Section --- */}
             <AnimatedSection className="features-section">
@@ -145,6 +137,43 @@ const Home = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            </AnimatedSection>
+
+            {/* --- NEW Our Commitment Section --- */}
+            <AnimatedSection className="commitment-section section-container">
+                <div className="section-header">
+                    <h2>Our Commitment to You</h2>
+                </div>
+                <div className="commitment-grid">
+                    <div className="commitment-item">
+                        <div className="commitment-icon"><FaUserCog /></div>
+                        <div className="commitment-content">
+                            <h3>Custom Solutions</h3>
+                            <p>We don't use one-size-fits-all templates. Your AI assistant is custom-built and trained specifically for your business needs.</p>
+                        </div>
+                    </div>
+                    <div className="commitment-item">
+                        <div className="commitment-icon"><FaDollarSign /></div>
+                        <div className="commitment-content">
+                            <h3>Transparent Pricing</h3>
+                            <p>No hidden fees or surprise charges. We provide clear, upfront pricing so you know exactly what to expect.</p>
+                        </div>
+                    </div>
+                    <div className="commitment-item">
+                        <div className="commitment-icon"><FaHandshake /></div>
+                        <div className="commitment-content">
+                            <h3>Ongoing Support</h3>
+                            <p>We're your digital partner. We provide continuous support to ensure your AI assistant is always running perfectly.</p>
+                        </div>
+                    </div>
+                    <div className="commitment-item">
+                        <div className="commitment-icon"><FaChartPie /></div>
+                        <div className="commitment-content">
+                            <h3>Measurable Results</h3>
+                            <p>Our goal is to provide a real return on your investment by increasing your leads and saving you time.</p>
+                        </div>
+                    </div>
                 </div>
             </AnimatedSection>
         </div>
