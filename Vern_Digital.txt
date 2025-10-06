@@ -1,0 +1,99 @@
+Vern Digital — Company Overview (Context Pack)
+
+Snapshot
+
+What we do: Build modern websites, deploy AI assistants (FAQ and booking), and deliver consultancy to improve digital presence and internal workflows.
+Who we serve: Small to mid-sized businesses that want fast, measurable outcomes without enterprise complexity.
+Core outcomes: More leads, automated bookings, clearer operations, better SEO, faster sites.
+
+Contact and Access
+
+Email: dylan@verndigital.com
+Phone: 07935 712911
+Location: Coventry, United Kingdom
+Live Demo: https://demo.verndigital.com
+Primary CTA on site: “Live Demo” and “Schedule a Consultation”
+
+Pillars and Pricing
+
+1) Web Services
+Website Remaster — £150 Flat Fee
+Modernize an existing site using current files; improved speed, UX, and polish.
+Website Creation — £250 Flat Fee
+Provide content once (bulk document); we build, preview, and hand over access on approval.
+Website Hosting + SEO — £30 P/M
+Reliable hosting plus ongoing SEO improvements to climb search rankings.
+
+2) AI Services
+Simple Chatbot — Free (TBD)
+Trained on your services/FAQs for instant answers and lead capture, 24/7.
+Simple Chatbot + Booking — £30 P/M
+Everything in Simple, plus calendar integration to check availability and book appointments.
+Advanced Chatbot — £60 P/M
+Combines FAQ + Booking with personalized workflows tailored to the business.
+
+3) Consultancy
+Digital Insights — £500 Flat Fee
+Deep-dive to identify growth opportunities across SEO, design, and social media.
+Workflow Insights — £1000 Flat Fee
+Observe day-to-day processes; recommend tool/AI optimizations to save time and money.
+Integrate Digital & Workflow Insights — Variable
+Execute high-value recommendations with minimal disruption.
+
+How It Works (Standard Engagement)
+
+Step 1: Discovery & Analysis
+Understand services, pricing, common questions; collect files/data for web and AI.
+
+Step 2: Custom Build & Integration
+Build website or train assistant; integrate Google Calendar and other tooling as needed.
+
+Step 3: Launch & Support
+Deploy to production, monitor results, iterate. Provide continuous support.
+
+Features and Capabilities
+
+Web
+Modern UI/UX, performance tuning, SEO foundations, hosting.
+Remaster flow for quick wins; full creation flow for new sites.
+
+AI Assistants
+
+FAQ/knowledge-based answers trained on client content.
+Booking automation via calendar availability and scheduling.
+Multi-language support possible.
+Lead capture and monthly performance reporting (inquiries handled, bookings made).
+Consultancy
+Actionable digital audits (SEO/design/social).
+Workflow assessments with ROI-focused recommendations.
+
+Commitments
+
+Fast Turnaround: Days, not months; clear milestones and feedback loops.
+Transparent Pricing: Flat fees (Web/Consultancy) and simple monthly tiers (AI).
+Privacy‑First: Minimal data usage, secure handling and storage.
+Measurable ROI: Track leads, bookings, time saved; optimize from real metrics.
+Ongoing Support: Long-term partner mindset; proactive improvements.
+
+Integrations and Tech Notes
+
+Google Calendar integration for booking assistants.
+Web3Forms used for contact form submissions.
+Frontend stack: React + Vite; animated, modern UI (glassmorphism, particles, timeline).
+Routing via React Router; smooth scroll-to-top on navigation.
+Demo experience accessible at https://demo.verndigital.com.
+Positioning and Value
+Practical, outcome‑driven alternatives to expensive, slow, or template-only offerings.
+Clear, low-friction onboarding and pricing.
+Focus on automating routine interactions (answers, bookings) to free staff time and capture more leads.
+Suggested Proof Points (for future content)
+Short case studies with Problem → Solution → Results (leads, bookings, SEO lift).
+Testimonials and client logos for social proof.
+ROI calculator (time saved, conversions captured vs. cost).
+Integrations page: current (Google Calendar, Web3Forms, email) and roadmap (e.g., Shopify/HubSpot/WhatsApp).
+
+Tone and Brand
+
+Confident, practical, helpful. Emphasize clarity, speed, and measurable outcomes.
+Avoid jargon; highlight what’s included and the result the client gets.
+Use this document as context for LLMs or team members to understand Vern Digital’s services, pricing, process, and value proposition.

@@ -1,0 +1,36 @@
+### Part 1: The User's Journey (What They See and Do) :technologist:
+This is the front-end experience. The goal is to make it as simple and low-friction as possible.
+Sign-up & Create Project:
+A user clicks a "Get Your Free Chatbot" button on the Vern Digital site.
+They are taken to a simple sign-up page where they create an account (email, password) and provide their business name and website URL. This creates their unique chatbot "project."
+Provide Content:
+After signing up, they are directed to the chatbot training page. You should offer two simple, self-serve options for providing content, mirroring your "bulk document" approach:
+Text Box: A large text area where they can copy and paste their FAQs, service descriptions, and other relevant business information.
+File Upload: An option to upload a single document (like a .txt, .md, or .pdf) containing the same information.
+Train the Bot:
+The user clicks a "Train My Bot" button. A loading indicator appears while your backend system processes the data (this should be very fast, ideally under a minute).
+They receive a success message: "Your chatbot is ready!"
+Install the Chatbot:
+The user is taken to a final "Installation" page.
+This page displays a small, auto-generated JavaScript snippet.
+Clear instructions are provided: "Copy this snippet and paste it just before the </body> tag on your website." You could also include simple guides for popular platforms like WordPress, Shopify, or Squarespace.
+Access the Dashboard:
+After installation, the user can access a simple dashboard. This dashboard should confirm the bot is active, show basic analytics like "Inquiries Handled" , and display any captured leads. Crucially, this is also where you will place a prominent call-to-action to 
+upgrade to the paid booking service.
+### Part 2: The Backend Implementation (What You Need to Build) :gear:
+This is the automated engine that powers the user's journey.
+User Authentication System:
+You need a system to manage user accounts (sign-up, login, password reset). Services like Supabase Auth, Firebase Authentication, or Clerk can handle this securely without you having to build it from scratch.
+Data Ingestion & Training Pipeline:
+When a user submits their content (text or file), an API endpoint receives it.
+This triggers a serverless function that cleans the text (removes irrelevant formatting) and chunks it into smaller, manageable pieces.
+Each chunk is then converted into numerical representations called embeddings using a model (like OpenAI's or a free open-source one).
+These embeddings are stored in a vector database (e.g., Pinecone, Supabase's pgvector, Chroma) and linked to the user's account ID. This database is what allows the chatbot to find relevant information instantly.
+Chatbot API & Snippet Generation:
+You'll need a central Chatbot API. When a user asks the chatbot a question on their website, the JavaScript snippet calls this API.
+The API takes the user's question, creates an embedding for it, queries the vector database to find the most relevant context chunks for that specific user, and then passes the question and context to a Large Language Model (LLM) to generate a helpful answer.
+Your system must automatically generate the unique JavaScript snippet for each user, embedding their unique API key or project ID within it.
+Lead Capture & Dashboard Backend:
+The chatbot needs a mechanism to recognize when to ask for contact details (e.g., if the user asks to "speak to someone").
+When a lead is captured, the information must be saved to a database and linked to the user's account.
+You'll need API endpoints to feed the simple analytics and lead information to the user's dashboard.
