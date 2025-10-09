@@ -97,3 +97,34 @@ Tone and Brand
 Confident, practical, helpful. Emphasize clarity, speed, and measurable outcomes.
 Avoid jargon; highlight what’s included and the result the client gets.
 Use this document as context for LLMs or team members to understand Vern Digital’s services, pricing, process, and value proposition.
+
+
+
+##########
+UPDATE LOG:
+
+[[
+## Project Update Log: Automated Chatbot Configuration
+Date: October 8, 2025
+
+SUCCESS: End-to-End Automation Workflow Complete
+The primary goal of creating an automated configuration pipeline has been achieved. The n8n workflow is fully operational and successfully processes a client's training data, creating a complete, structured configuration in a firestore cloud database. This provides the foundation for clearer operations and faster client onboarding.
+
+Key Milestones Achieved:
+
+Live Data Ingestion: A webhook was configured to successfully receive detailed client data from the 'train your chatbot' page and file uploads from the frontend training form, automating the "Discovery & Analysis" step of a new project.
+
+Dynamic Content Generation: The workflow dynamically processes the incoming data to:
+
+Generate a unique customerID for each client.
+
+Consolidate various text inputs into a structured knowledge_base.
+
+Use an AI model to generate a hyper-personalized system_prompt.
+
+Assemble a config_json object with client metadata.
+
+Database Integration: The architecture was pivoted from writing local files to a more scalable solution. The workflow now connects directly to a Firebase Firestore database.
+
+Final Output: For each new client, the workflow now automatically creates a new, unique document in Firestore containing the complete and correctly formatted knowledge_base, system_prompt, and config_json. This data is ready to be used by the central Python backend.
+]]

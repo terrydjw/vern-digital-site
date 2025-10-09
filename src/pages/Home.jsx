@@ -489,6 +489,7 @@ const CommitmentItem = ({ icon, title, description, index }) => {
     return (
         <div
             ref={ref}
+            className="commitment-item"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{
@@ -716,8 +717,7 @@ const Home = () => {
                     >
                         We design modern websites, build AI assistants that answer questions and book appointments, and deliver insights that improve your workflows. Practical solutions with clear pricing and measurable results.
                     </p>
-                    <Link
-                        to="/demo/live-experience"
+                    <div
                         style={{
                             display: 'inline-block',
                             background: 'linear-gradient(135deg, #D2042D, #FF1744)',
@@ -735,16 +735,32 @@ const Home = () => {
                             animation: 'slideUp 0.6s ease-out 0.3s backwards',
                             position: 'relative',
                             overflow: 'hidden',
-                        }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-6px) scale(1.05)';
-                            e.currentTarget.style.boxShadow = '0 25px 60px rgba(210, 4, 45, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                            e.currentTarget.style.boxShadow = '0 20px 50px rgba(210, 4, 45, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                            cursor: 'not-allowed',
+                            opacity: '0.7',
+                            pointerEvents: 'none'
                         }}
                     >
+                        {/* Testing Banner */}
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '10px',
+                                right: '10px',
+                                background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
+                                color: 'white',
+                                padding: '4px 12px',
+                                borderRadius: '20px',
+                                fontSize: '0.8rem',
+                                fontWeight: '700',
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px',
+                                zIndex: 10,
+                                boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+                                animation: 'pulse 2s infinite'
+                            }}
+                        >
+                            Testing
+                        </div>
                         <span style={{ position: 'relative', zIndex: 2 }}>See It in Action</span>
                         <div
                             style={{
@@ -758,7 +774,7 @@ const Home = () => {
                                 pointerEvents: 'none',
                             }}
                         />
-                    </Link>
+                    </div>
                 </div>
             </section>
 
@@ -948,6 +964,7 @@ const Home = () => {
                         />
                     </div>
                     <div
+                        className="commitment-container"
                         style={{
                             background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 247, 0.8))',
                             backdropFilter: 'blur(15px)',
@@ -958,6 +975,7 @@ const Home = () => {
                         }}
                     >
                         <div
+                            className="commitment-grid"
                             style={{
                                 display: 'grid',
                                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',

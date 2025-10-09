@@ -591,9 +591,53 @@ main {
     }
 }
 
+/* Mobile-specific timeline fixes for How It Works section */
+@media screen and (max-width: 768px) {
+    .timeline-center-line {
+        left: 20px !important;
+        margin-left: -2px !important;
+    }
+
+    .timeline-item {
+        width: 100% !important;
+        left: 0 !important;
+        padding-left: 50px !important;
+        padding-right: 15px !important;
+    }
+
+    .timeline-item::after {
+        left: 10px !important;
+        right: auto !important;
+    }
+}
+
 .how-it-works-section {
     margin-top: 6rem;
     padding-top: 5rem;
+}
+
+/* Mobile-specific commitment section fixes */
+@media screen and (max-width: 768px) {
+    .commitment-container {
+        padding: 2rem !important;
+    }
+
+    .commitment-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .commitment-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1rem !important;
+        max-width: 300px !important;
+    }
 }
 
 /* --- Detailed Features Section --- */

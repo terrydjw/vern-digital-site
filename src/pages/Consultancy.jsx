@@ -389,7 +389,37 @@ const Consultancy = () => {
                     }}
                 >
                     {services.map((service, index) => (
-                        <ServiceOffering key={index} {...service} index={index} />
+                        <div
+                            key={index}
+                            style={{
+                                position: 'relative',
+                                cursor: 'not-allowed',
+                                opacity: '0.7'
+                            }}
+                        >
+                            {/* Testing Banner */}
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    top: '10px',
+                                    right: '10px',
+                                    background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
+                                    color: 'white',
+                                    padding: '4px 12px',
+                                    borderRadius: '20px',
+                                    fontSize: '0.8rem',
+                                    fontWeight: '700',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1px',
+                                    zIndex: 10,
+                                    boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+                                    animation: 'pulse 2s infinite'
+                                }}
+                            >
+                                Testing
+                            </div>
+                            <ServiceOffering {...service} index={index} />
+                        </div>
                     ))}
                 </div>
             </div>

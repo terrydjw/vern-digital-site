@@ -77,8 +77,8 @@ const Signup = () => {
         // Simulate API call
         setTimeout(() => {
             setIsLoading(false);
-            // For now, redirect to content page
-            window.location.href = '/chatbot/content';
+            // For now, redirect to training page
+            window.location.href = '/chatbot/training';
         }, 1500);
     };
 

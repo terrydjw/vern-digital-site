@@ -41,9 +41,38 @@ const Navbar = () => {
                 <NavLink to="/" className={({ isActive }) => isActive ? "navbar-link navbar-link-active" : "navbar-link"} onClick={toggleMenu}>Home</NavLink>
                 <NavLink to="/services" className={({ isActive }) => isActive ? "navbar-link navbar-link-active" : "navbar-link"} onClick={toggleMenu}>Services</NavLink>
                 <NavLink to="/contact" className={({ isActive }) => isActive ? "navbar-link navbar-link-active" : "navbar-link"} onClick={toggleMenu}>Contact</NavLink>
-                <NavLink to="/demo/live-experience" className="navbar-cta-button" onClick={toggleMenu}>
+                <div
+                    className="navbar-cta-button"
+                    style={{
+                        position: 'relative',
+                        cursor: 'not-allowed',
+                        opacity: '0.7',
+                        pointerEvents: 'none'
+                    }}
+                >
+                    {/* Testing Banner */}
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: '-8px',
+                            right: '-8px',
+                            background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
+                            color: 'white',
+                            padding: '2px 8px',
+                            borderRadius: '12px',
+                            fontSize: '0.7rem',
+                            fontWeight: '700',
+                            textTransform: 'uppercase',
+                            letterSpacing: '1px',
+                            zIndex: 10,
+                            boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+                            animation: 'pulse 2s infinite'
+                        }}
+                    >
+                        Testing
+                    </div>
                     Live Demo
-                </NavLink>
+                </div>
             </nav>
 
             {/* Scroll progress bar */}

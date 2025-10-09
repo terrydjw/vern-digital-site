@@ -14,7 +14,38 @@ const Footer = () => {
                     <Link to="/">Home</Link>
                     <Link to="/services">Services</Link>
                     <Link to="/contact">Contact</Link>
-                    <Link to="/demo/live-experience">Live Demo</Link>
+                    <div
+                        style={{
+                            position: 'relative',
+                            cursor: 'not-allowed',
+                            opacity: '0.7',
+                            pointerEvents: 'none',
+                            display: 'inline-block'
+                        }}
+                    >
+                        {/* Testing Banner */}
+                        <div
+                            style={{
+                                position: 'absolute',
+                                top: '-8px',
+                                right: '-8px',
+                                background: 'linear-gradient(135deg, #ff6b35, #f7931e)',
+                                color: 'white',
+                                padding: '2px 8px',
+                                borderRadius: '12px',
+                                fontSize: '0.7rem',
+                                fontWeight: '700',
+                                textTransform: 'uppercase',
+                                letterSpacing: '1px',
+                                zIndex: 10,
+                                boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+                                animation: 'pulse 2s infinite'
+                            }}
+                        >
+                            Testing
+                        </div>
+                        Live Demo
+                    </div>
                 </div>
                 <div className="footer-links">
                     <h4>Contact</h4>

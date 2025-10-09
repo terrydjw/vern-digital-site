@@ -368,7 +368,16 @@ const WebServices = () => {
                     }}
                 >
                     {services.map((service, index) => (
-                        <ServiceOffering key={index} {...service} index={index} />
+                        <a
+                            key={index}
+                            href="mailto:dylan@verndigital.com?subject=Web Services Inquiry"
+                            style={{
+                                textDecoration: 'none',
+                                position: 'relative'
+                            }}
+                        >
+                            <ServiceOffering {...service} index={index} />
+                        </a>
                     ))}
                 </div>
             </div>
